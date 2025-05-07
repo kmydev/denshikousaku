@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Github",
+        "link": "https://github.com/kmydev/denshikousaku",
+        "image": "images/social/github.svg"
+    },
+    {
+        "name": "Twitter",
+        "link": "https://twitter.com/mkohno323dev",
+        "image": "images/social/twitter.svg"
+    }
+]

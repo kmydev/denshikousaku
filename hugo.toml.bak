@@ -1,0 +1,14 @@
+baseURL = 'https://example.org/'
+languageCode = 'ja'
+title = '電子工作ノート'
+theme = 'hugo-whisper-theme'
+
+ignoreLogs = [ 'warning-goldmark-raw-html' ]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  homepage_content = "ようこそ！電子工作を始めましょう"
