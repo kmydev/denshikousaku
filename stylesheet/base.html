@@ -1,0 +1,29 @@
+<!-- content/stylesheet/base.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="初心者向け電子工作ガイド">
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="/">電子工作ノート</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/intro/">はじめに</a></li>
+        <li><a href="/raspberrypipico/">Raspberry Pi Pico</a></li>
+        <li><a href="/arduino/">Arduino</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {{content}}
+  </main>
+  <footer>
+    <p>&copy; 2025 電子工作ノート</p>
+  </footer>
+</body>
+</html>
