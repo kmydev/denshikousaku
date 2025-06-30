@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>準備ステップ - 電子工作ノート</title>
+  <link rel="stylesheet" href="../stylesheet/style.css">
+</head>
+<body>
+  <header>
+    <h1>準備ステップ</h1>
+    <nav>
+      <a href="index.html" aria-label="セクショントップに戻る">← セクショントップに戻る</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <p>
+        このページでは、Raspberry Pi Pico を使った開発を始めるための準備手順を説明します。
+        主に Windows 11 の PC と MicroPython を用いて進めていきます。
+      </p>
+
+      <h2>1. 必要なもの</h2>
+      <ul>
+        <li>Windows 11 を搭載したパソコン</li>
+        <li>Raspberry Pi Pico H（ピンヘッダ付き）</li>
+        <li>ブレッドボード</li>
+        <li>ジャンパワイヤー</li>
+        <li>USBケーブル（データ通信対応）</li>
+      </ul>
+
+      <h2>2. 開発環境：Thonny のインストール</h2>
+      <p>
+        プログラムの作成と実行には、初心者に優しいPython統合開発環境「<strong>Thonny</strong>」を使用します。
+        以下のリンクから最新版をダウンロードしてインストールしてください。
+      </p>
+      <p><a href="https://thonny.org/" target="_blank">▶ Thonny 公式サイト</a></p>
+
+      <h2>3. Pico の接続準備</h2>
+      <ul>
+        <li>Raspberry Pi Pico をブレッドボードに差し込みます。</li>
+        <li>USBケーブルを使って、Pico をパソコンに接続します。</li>
+        <li>このとき Pico の BOOTSEL ボタンを押しながら USB ケーブルを挿すと、PC に「RPI-RP2」というUSBストレージとして認識されます。</li>
+      </ul>
+
+      <h2>4. MicroPython のインストール</h2>
+      <p>
+        「RPI-RP2」として認識された Pico に、MicroPython のファームウェア（.uf2ファイル）をドラッグ＆ドロップすることでインストールできます。
+      </p>
+      <p>
+        最新の MicroPython ファームウェアは以下からダウンロードできます：<br>
+        <a href="https://micropython.org/download/rp2-pico/" target="_blank">▶ MicroPython ダウンロード（Pico用）</a>
+      </p>
+
+      <h2>5. Thonny で接続・確認</h2>
+      <ul>
+        <li>Thonny を起動します。</li>
+        <li>「ツール」＞「設定」＞「インタプリタ」タブから「MicroPython (Raspberry Pi Pico)」を選択。</li>
+        <li>シリアルポートが自動的に検出されるか、COMポートを選択します。</li>
+        <li>設定後、「REPL」ウィンドウに `>>>` が表示されれば接続成功です。</li>
+      </ul>
+
+      <h2>6. プログラムを書いて動かす</h2>
+      <p>
+        下記のような簡単なプログラムを Thonny に入力し、Pico 上で実行してみましょう：
+      </p>
+
+<pre><code>from machine import Pin
+import time
+
+led = Pin(25, Pin.OUT)
+
+while True:
+    led.toggle()
+    time.sleep(0.5)
+</code></pre>
+
+      <p>LED が 0.5 秒ごとに点滅すれば成功です。</p>
+
+      <h2>7. 動かないときの確認ポイント</h2>
+      <ul>
+        <li>Pico に正しく MicroPython がインストールされているか</li>
+        <li>Thonny のインタプリタ設定が正しいか</li>
+        <li>USBケーブルが充電専用ではなく「データ通信対応」であるか</li>
+        <li>接続時に BOOTSEL ボタンを押したか</li>
+        <li>シリアルポート（COM）が正しく選ばれているか</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>ステップ一覧</h2>
+      <ul>
+        <li><a href="about.html">Raspberry Pi Picoについて</a></li>
+        <li><a href="prepare.html">準備ステップ</a></li>
+        <li><a href="ledblink1.html">LED を点滅させてみよう（基本編）</a></li>
+        <li><a href="ledblink2.html">LED を点滅させてみよう（応用編）</a></li>
+        <li><a href="details.html">さらに詳しく知りたい方へ</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 電子工作ノート
+  </footer>
+</body>
+</html>

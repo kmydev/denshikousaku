@@ -103,3 +103,19 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* pre */
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 1em;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-family: "Courier New", monospace;
+  font-size: 0.95em;
+}
+
+/* code */
+code {
+  color: #333;
+}
